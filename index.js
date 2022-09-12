@@ -4,6 +4,9 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import Router from './routes/personRouter.js';
+import dotenv from 'dotenv'
+
+dotenv.config();
 
 
 const app = express();
@@ -29,8 +32,8 @@ app.get('/', (req, res) => {
 })
 
 // Send port to Express
-const DB_USER = 'aRTIE'; //@TO DO: PUT IN .ENV
-const DB_PASSWORD = 'ctKoHdqrFGxt9Xig';
+const DB_USER = process.env.DB_USER; //@TO DO: PUT IN .ENV
+const DB_PASSWORD = process.env.DB_PASSWORD;
 
 mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster0.cbuvcd8.mongodb.net/?retryWrites=true&w=majority`)
 .then(() => {
