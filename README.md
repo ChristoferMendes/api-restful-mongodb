@@ -12,9 +12,10 @@
 - `cp .env.example .env`
 
 Create an account on [MONGO DB ATLAS](ATLAS_SITE);
+- Create a Cluster 
+- In `Database Access` create a new Database User
+
+In `.env`, replace `DB_USER` and `DB_PASSWORD` with your credentials
 
 
 [ATLAS_SITE]: [https://www.mongodb.com/cloud/atlas/register]
-```js
-git clone git@github.com:ChristoferMendes/react-native-expo-auth0.git
-```
